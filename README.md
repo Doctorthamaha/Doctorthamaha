@@ -1,8 +1,10 @@
 - 👋 Hi, I’m @Doctorthamaha
-- 👀 I’m interested in learning more about Cybersecurty ...
-- 🌱 I’m currently learning Information technology(software development)...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 👀 I have a Cisco Academydigital badge of Introduction To Cybersecurty
+- IT(Software development)Full time student
+- Languages(HTML,CSS,Javascript essential,C# Net,SQL)
+- (Microsoft)
+- I currently specialize in Web pages Templates and C# Console applications Coding
+- I'm looking forward to learn, Collaborate and share/solve technical problems with The community 
 
 <!---
 Doctorthamaha/Doctorthamaha is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
