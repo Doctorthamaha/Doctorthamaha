@@ -1,0 +1,102 @@
+sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    //Interface (IStudentOperations): Defines operations like DisplayDetails() and CalculateGrade() that every student class should implement
+    public interface IStudentOperations
+    {
+        void DisplayDetails();
+        double CalculateGrade();
+
+    }
+
+    public abstract class Person
+    {
+        //Auto implemented properties
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        //Constructor to initialize name and age
+        public Person(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+        public abstract void StudentInfo();
+    }
+
+    public class Student : Person 
+    {
+        public string StudentId { get; set; }
+        public double[] Marks { get; set; }
+
+        //Constructor
+
+        public Student(string name, int age,string studentId, double[] marks): base (name, age)
+
+        {
+            StudentId = studentId;
+            Marks = marks;
+
+        }
+
+        
+
+        public override void StudentInfo() //Override the the method to display basic student info
+        {
+            ShowInfo(); //reuse to display info.
+        }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Age: {Age}");
+            Console.WriteLine($"Student ID: {StudentId}");
+        }
+
+
+        //Implement the basic Student Info and grade
+        public void DisplayInfo()
+        {
+            ShowInfo();//reuse to display info.
+            double averageGrade = CalculateGRAde();
+            Console.WriteLine($"Average Grade: {averageGrade:f2}");
+
+        }
+
+        public double CalculateGRAde()
+        {
+            double totalMArks = 0;
+
+            foreach (var mark in Marks)
+            {
+                totalMArks =+ mark;
+
+            }
+            return Marks.Length> 0 ? totalMArks / Marks.Length:0;
+        }
+
+    }
+
+
+     class Program
+    {
+
+        static void Main(string[] args)
+        {
+            double[] marks = {96.5,90.0,88.0,92.5};
+            Student student = new Student("tEFO", 35, "223019044", marks);
+
+            student.ShowInfo();
+
+            Console.WriteLine();
+            student.DisplayInfo();
+
+
+        }
+    }
+}
